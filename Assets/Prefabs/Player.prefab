@@ -769,6 +769,7 @@ GameObject:
   - component: {fileID: -1351122008503159392}
   - component: {fileID: 2911974811104114541}
   - component: {fileID: 602119017300267599}
+  - component: {fileID: 406956504714773526}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -858,7 +859,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectedRigidbody: {fileID: -1351122008503159392}
-  selectedCollider: {fileID: 0}
+  selectedCollider: {fileID: 6919022079885717503}
   symmetry: 1
   mode: 0
 --- !u!114 &602119017300267599
@@ -907,6 +908,19 @@ MonoBehaviour:
     handColliders: 1
     legColliders: 1
     footColliders: 0
+--- !u!65 &406956504714773526
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4265630964563597462}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.59, y: 1.8643857, z: 0.29}
+  m_Center: {x: 0, y: 0.9264472, z: 0}
 --- !u!1 &4265630964563597464
 GameObject:
   m_ObjectHideFlags: 0

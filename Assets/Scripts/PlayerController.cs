@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     public static PlayerController instance;
     public float playerSpeed;
     public float playerSwipeSpeed;
+    Animator _anim;
     public virtual void Awake()
     {
         if (!instance)
@@ -17,6 +18,7 @@ public class PlayerController : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        _anim = GetComponent<Animator>();
     }
     void Update()
     {
@@ -24,6 +26,24 @@ public class PlayerController : MonoBehaviour
         Touch();
         Clamp();
         transform.Translate(Vector3.forward * Time.deltaTime * playerSpeed);
+        if (Input.GetKeyDown("t"))
+        {
+            _anim.SetBool("RightP",true);
+        }
+        else
+        {
+            _anim.SetBool("RightP", false);
+        }
+
+        if (Input.GetKeyDown("r"))
+        {
+            _anim.SetBool("LeftP",true);
+        }
+        else
+        {
+            _anim.SetBool("LeftP", false);
+        }
+
         if (Input.GetMouseButtonDown(0))
         {
             isTouch = true;

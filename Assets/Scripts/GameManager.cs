@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     public bool isGameRunning = false;
+    public bool failLevel = false;
 
     public virtual void Awake()
     {

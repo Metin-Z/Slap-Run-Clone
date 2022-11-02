@@ -5,6 +5,7 @@ using UnityEngine;
 public class CanvasManager : MonoBehaviour
 {
     public GameObject startPanel;
+    public GameObject restartPanel;
     public static CanvasManager instance;
     public virtual void Awake()
     {
@@ -24,6 +25,7 @@ public class CanvasManager : MonoBehaviour
             if (Input.GetMouseButtonDown(0))
             {
                 GameManager.instance.isGameRunning = true;
+                GameManager.instance.failLevel = false;
                 startPanel.SetActive(false);
             }
         }

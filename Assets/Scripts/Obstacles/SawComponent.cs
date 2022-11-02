@@ -14,6 +14,7 @@ public class SawComponent : MonoBehaviour
             {
                 other.GetComponent<PlayerController>().enabled = false;
                 GameManager.instance.isGameRunning = false;
+                GameManager.instance.failLevel = true;
             }
             if (other.gameObject.CompareTag("Enemy"))
             {

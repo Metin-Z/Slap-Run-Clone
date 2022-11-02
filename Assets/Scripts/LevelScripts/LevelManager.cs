@@ -15,6 +15,10 @@ public class LevelManager : MonoBehaviour
         {
             NextLevel();
         }
+        if (GameManager.instance.failLevel == true)
+        {
+            CanvasManager.instance.restartPanel.SetActive(true);
+        }
     }
     public void Start()
     {
@@ -52,7 +56,8 @@ public class LevelManager : MonoBehaviour
     }
     public void RestartLevel()
     {
-        InitializeLevel();     
+        InitializeLevel();
+        CanvasManager.instance.restartPanel.SetActive(false);
     }
     public Level GetCurrentLevel()
     {

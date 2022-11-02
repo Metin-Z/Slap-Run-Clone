@@ -5,7 +5,18 @@ using UnityEngine;
 public class CanvasManager : MonoBehaviour
 {
     public GameObject startPanel;
-
+    public static CanvasManager instance;
+    public virtual void Awake()
+    {
+        if (!instance)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
     private void Update()
     {
         if (GameManager.instance.isGameRunning == false)

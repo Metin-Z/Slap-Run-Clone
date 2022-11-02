@@ -16,7 +16,7 @@ public class EnemyController : MonoBehaviour
     public bool CatchPlayer;
     public IEnumerator Run()
     {
-        yield return new WaitForSeconds(1.25f);
+        yield return new WaitForSeconds(1.75f);
         _anim.SetBool("Run", true);
         _anim.enabled = true;
         CatchPlayer = true;

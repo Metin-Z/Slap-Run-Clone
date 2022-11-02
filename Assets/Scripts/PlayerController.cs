@@ -14,10 +14,6 @@ public class PlayerController : MonoBehaviour
         {
             instance = this;
         }
-        else
-        {
-            Destroy(gameObject);
-        }
         _anim = GetComponent<Animator>();
     }
     void Update()

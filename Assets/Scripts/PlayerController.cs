@@ -10,10 +10,8 @@ public class PlayerController : MonoBehaviour
     Animator _anim;
     public virtual void Awake()
     {
-        if (!instance)
-        {
             instance = this;
-        }
+     
         _anim = GetComponent<Animator>();
     }
     void Update()

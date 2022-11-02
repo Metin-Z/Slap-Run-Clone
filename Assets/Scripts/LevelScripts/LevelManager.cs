@@ -40,7 +40,7 @@ public class LevelManager : MonoBehaviour
         }
         lastLevelPrefab = Instantiate(currentLevel.Prefab);
         levelObjectList.Add(lastLevelPrefab);
-
+        CameraController.instance.GetTarget(PlayerController.instance.gameObject.transform);
 
     }
     public void NextLevel()
@@ -49,7 +49,6 @@ public class LevelManager : MonoBehaviour
         PlayerPrefs.SetInt(CommonTypes.LEVEL_DATA_KEY, currentLevel.Id + 1);
         InitializeLevel();
         PlayerPrefs.SetInt(CommonTypes.LEVEL_FAKE_DATA_KEY, PlayerPrefs.GetInt(CommonTypes.LEVEL_FAKE_DATA_KEY) + 1);
-        CameraController.instance.GetTarget(PlayerController.instance.gameObject.transform);
     }
     public void RestartLevel()
     {

@@ -288,7 +288,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 15e2279d1c17ac7469894f97520a549c, type: 2}
+  - {fileID: 2100000, guid: 0af954739f306cb4d9a2f1394b9a7483, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -649,6 +649,7 @@ MonoBehaviour:
   _anim: {fileID: 4138954467007203714}
   _navMesh: {fileID: -8887522626327602426}
   Target: {x: 0, y: 0, z: 0}
+  CatchPlayer: 0
 --- !u!54 &4138954467007203716
 Rigidbody:
   m_ObjectHideFlags: 0

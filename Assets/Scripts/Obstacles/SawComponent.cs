@@ -13,6 +13,12 @@ public class SawComponent : MonoBehaviour
             if (other.gameObject.CompareTag("Player"))
             {
                 other.GetComponent<PlayerController>().enabled = false;
+                GameManager.instance.isGameRunning = false;
+            }
+            if (other.gameObject.CompareTag("Enemy"))
+            {
+                other.GetComponent<EnemyController>().CatchPlayer = false;
+                Destroy(other.gameObject, 1.5f);
             }
         }
     }

@@ -22,28 +22,12 @@ public class PlayerController : MonoBehaviour
     }
     void Update()
     {
-
+        if (GameManager.instance.isGameRunning == false)
+            return;
+        _anim.SetBool("Run", true); 
         Touch();
         Clamp();
         transform.Translate(Vector3.forward * Time.deltaTime * playerSpeed);
-        if (Input.GetKeyDown("t"))
-        {
-            _anim.SetBool("RightP",true);
-        }
-        else
-        {
-            _anim.SetBool("RightP", false);
-        }
-
-        if (Input.GetKeyDown("r"))
-        {
-            _anim.SetBool("LeftP",true);
-        }
-        else
-        {
-            _anim.SetBool("LeftP", false);
-        }
-
         if (Input.GetMouseButtonDown(0))
         {
             isTouch = true;
@@ -53,9 +37,6 @@ public class PlayerController : MonoBehaviour
             isTouch = false;
         }
     }
-
-
-
     public void Clamp()
     {
         float minX = -2.3f;
@@ -69,5 +50,36 @@ public class PlayerController : MonoBehaviour
         if (!isTouch)
             return;
         transform.Translate(Vector3.right * Input.GetAxis("Mouse X") * playerSwipeSpeed * Time.deltaTime);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Enemy"))
+        {
+            GameObject Enemy = other.gameObject;
+            Punch(Enemy);
+        }
+    }
+    public void Punch(GameObject Enemy)
+    {
+        if (Enemy.transform.position.x > transform.position.x)
+        {
+            _anim.SetBool("RightP", true);
+        }
+        else
+        {
+            _anim.SetBool("RightP", false);
+        }
+
+        if (Enemy.transform.position.x < transform.position.x)
+        {
+            _anim.SetBool("LeftP", true);
+        }
+        else
+        {
+            _anim.SetBool("LeftP", false);
+        }
+        Enemy.GetComponent<EnemyController>().Catch();
+
     }
 }

@@ -35,8 +35,6 @@ public class BonusManComponent : MonoBehaviour
         {
             _rb.mass = 0.65f;
             item.mass = 0.65f;
-            //item.constraints = RigidbodyConstraints.FreezePositionX;
-            //item.constraints = RigidbodyConstraints.FreezeRotation;
             item.AddForce(transform.up * 4* multiplier);
             item.AddForce(transform.forward * 8 * multiplier);
             item.isKinematic = false;

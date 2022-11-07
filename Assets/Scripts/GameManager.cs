@@ -32,7 +32,6 @@ public class GameManager : MonoBehaviour
         {
             yield return new WaitForSeconds(3.25f);
             score-=1;
-            Debug.Log("score: " + score);
             if (score < 0)
             {
                 score = 0;

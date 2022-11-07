@@ -33,13 +33,12 @@ public class BonusManComponent : MonoBehaviour
 
         foreach (Rigidbody item in bonusMan.GetComponentsInChildren<Rigidbody>())
         {
-            _rb.mass = 1;
-            item.mass = 0.8f;
-            item.AddForce(transform.up * 6* multiplier);
-            item.AddForce(transform.forward * 15 * multiplier);
-            item.isKinematic = false;                       
-            item.velocity = Vector3.zero;
-            item.angularVelocity = Vector3.zero;
+            _rb.mass = 0.75f;
+            item.mass = 0.75f;
+            item.AddForce(transform.up * 2* multiplier);
+            item.AddForce(transform.forward * 7 * multiplier);
+            item.isKinematic = false;
+            item.constraints = RigidbodyConstraints.FreezePositionX;
             
         }
     }

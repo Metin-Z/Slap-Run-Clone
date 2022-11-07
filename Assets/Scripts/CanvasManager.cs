@@ -7,12 +7,19 @@ public class CanvasManager : MonoBehaviour
 {
     public GameObject startPanel;
     public GameObject restartPanel;
+    public GameObject nextLevelPanel;
 
     public TextMeshProUGUI currentLevelTXT;
     public GameObject currentLevelObject;
 
     public static CanvasManager instance;
     public int currentLevelID;
+
+    public TextMeshProUGUI totalScoreTXT;
+    public GameObject scoreTXT;
+
+    public int totalScore;
+    public int scoreMultiplier;
 
     public virtual void Awake()
     {
@@ -39,5 +46,11 @@ public class CanvasManager : MonoBehaviour
                 currentLevelObject.SetActive(true);
             }
         }
+    }
+    public void GetLevel()
+    {
+        totalScore =GameManager.instance.score * scoreMultiplier;
+       totalScoreTXT.text = totalScore.ToString();
+        nextLevelPanel.SetActive(true);
     }
 }

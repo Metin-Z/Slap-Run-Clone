@@ -52,6 +52,8 @@ public class PlayerController : MonoBehaviour
         {
             GameObject Enemy = other.gameObject;
             Punch(Enemy);
+            GameManager.instance.score+=5;
+            GameManager.instance.GetScoreMultiplier();
         }
     }
     public void Punch(GameObject Enemy)

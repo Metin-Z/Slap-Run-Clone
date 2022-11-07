@@ -7,6 +7,8 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     public bool isGameRunning = false;
     public bool failLevel = false;
+    public bool bonusLevel;
+    public int score;
 
     public virtual void Awake()
     {
@@ -17,6 +19,25 @@ public class GameManager : MonoBehaviour
         else
         {
             Destroy(gameObject);
+        }
+    }
+    public void GetScoreMultiplier()
+    {
+        StartCoroutine(ScoreMultiplier());
+        
+    }
+    public IEnumerator ScoreMultiplier()
+    {
+        while (!bonusLevel && score >= 0)
+        {
+            yield return new WaitForSeconds(3.25f);
+            score-=1;
+            Debug.Log("score: " + score);
+            if (score < 0)
+            {
+                score = 0;
+            }
+
         }
     }
 }

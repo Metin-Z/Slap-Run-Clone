@@ -8,6 +8,7 @@ public class EnemyController : MonoBehaviour
     public Animator _anim;
     public NavMeshAgent _navMesh;
     public Vector3 Target;
+    public bool final;
     public void Catch()
     {
         _anim.enabled = false;
@@ -17,9 +18,12 @@ public class EnemyController : MonoBehaviour
     public IEnumerator Run()
     {
         yield return new WaitForSeconds(1.75f);
-        _anim.SetBool("Run", true);
-        _anim.enabled = true;
-        CatchPlayer = true;
+        if (!final)
+        {
+            _anim.SetBool("Run", true);
+            _anim.enabled = true;
+            CatchPlayer = true;
+        }     
     }
     private void Update()
     {

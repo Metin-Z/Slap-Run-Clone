@@ -57,10 +57,15 @@ public class LevelManager : MonoBehaviour
     public void RestartLevel()
     {
         InitializeLevel();
+        GameManager.instance.score = 0;
+        GameManager.instance.bonusLevel = false;
         CanvasManager.instance.restartPanel.SetActive(false);
+        CanvasManager.instance.currentLevelObject.SetActive(true);
     }
     public Level GetCurrentLevel()
     {
+        GameManager.instance.score = 0;
+        GameManager.instance.bonusLevel = false;
         int currentLevelId = PlayerPrefs.GetInt(CommonTypes.LEVEL_DATA_KEY);
         int totalLevelCount = Levels.Length;
         return Levels.SingleOrDefault(x => x.Id == currentLevelId % totalLevelCount);

@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
     public static PlayerController instance;
     public float playerSpeed;
     public float playerSwipeSpeed;
-    Animator _anim;
+    public Animator _anim;
     public virtual void Awake()
     {
             instance = this;

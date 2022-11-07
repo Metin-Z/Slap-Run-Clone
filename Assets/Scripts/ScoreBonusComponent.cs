@@ -10,6 +10,7 @@ public class ScoreBonusComponent : MonoBehaviour
         if (collision.gameObject.CompareTag("Bonus"))
         {
             transform.GetComponent<MeshRenderer>().material.DOColor(Color.gray, 1).SetEase(Ease.Linear).SetLoops(-1, LoopType.Yoyo);
+            collision.gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
         }
     }
 }

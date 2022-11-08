@@ -14,6 +14,7 @@ public class BonusManComponent : MonoBehaviour
             GameManager.instance.isGameRunning = false;
             camera.SetActive(true);
             Time.timeScale = 0.5f;
+            PlayerController.instance.enabled = false;
             StartCoroutine(KickBonusMan());
         }
     }
@@ -32,7 +33,6 @@ public class BonusManComponent : MonoBehaviour
 
         int multiplier = GameManager.instance.score;
 
-        PlayerController.instance.enabled = false;
         _rb.AddForce(transform.up * 4 * multiplier);
         _rb.AddForce(transform.forward * 8 * multiplier);     
     }

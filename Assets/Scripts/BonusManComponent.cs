@@ -13,6 +13,7 @@ public class BonusManComponent : MonoBehaviour
         {
             GameManager.instance.isGameRunning = false;
             camera.SetActive(true);
+            Time.timeScale = 0.5f;
             StartCoroutine(KickBonusMan());
         }
     }
@@ -22,7 +23,7 @@ public class BonusManComponent : MonoBehaviour
         PlayerController.instance._anim.SetBool("Kick", true);
 
         yield return new WaitForSeconds(0.8f);
-
+        Time.timeScale = 1f;
         _rb = bonusMan.GetComponent<Rigidbody>();
         bonusMan.GetComponent<Animator>().enabled = false;
 
@@ -31,6 +32,7 @@ public class BonusManComponent : MonoBehaviour
 
         int multiplier = GameManager.instance.score;
 
+        PlayerController.instance.enabled = false;
         _rb.AddForce(transform.up * 4 * multiplier);
         _rb.AddForce(transform.forward * 8 * multiplier);     
     }

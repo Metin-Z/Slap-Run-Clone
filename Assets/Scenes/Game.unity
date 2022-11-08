@@ -2413,7 +2413,6 @@ MonoBehaviour:
   currentLevelID: 0
   totalScoreTXT: {fileID: 930604001}
   scoreTXT: {fileID: 2124943240}
-  score: 0
   totalScore: 0
   scoreMultiplier: 0
 --- !u!114 &2000112267

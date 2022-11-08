@@ -20,12 +20,18 @@ public class CameraController : MonoBehaviour
     }
     void Start()
     {
-        GetTarget(PlayerController.instance.transform);
+        StartCoroutine(ChekTarget());
     }
 
    public void GetTarget(Transform target)
     {
         _cinemachine.Follow = target;
         _cinemachine.LookAt = target;
+    }
+    public IEnumerator ChekTarget()
+    {
+        yield return new WaitForSeconds(0.2f);
+        GetTarget(PlayerController.instance.transform);
+
     }
 }

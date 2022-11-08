@@ -10,14 +10,7 @@ public class SpeedGate : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             GameObject player = other.gameObject;
-            player.GetComponent<PlayerController>().playerSpeed = player.GetComponent<PlayerController>().playerSpeed * 2;
-            StartCoroutine(FastRun(player));
+            player.GetComponent<PlayerController>().playerSpeed = player.GetComponent<PlayerController>().playerSpeed + 2;
         }
-    }
-    public IEnumerator FastRun(GameObject player)
-    {
-        yield return new WaitForSeconds(3);
-
-        player.GetComponent<PlayerController>().playerSpeed = player.GetComponent<PlayerController>().playerSpeed / 2;
     }
 }

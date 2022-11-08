@@ -9,7 +9,7 @@ public class BonusActive : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             GameManager.instance.bonusLevel = true;
-            other.GetComponent<PlayerController>().playerSpeed = 6;
+            other.GetComponent<PlayerController>().playerSpeed = other.GetComponent<PlayerController>().playerSpeed + 4;
         }
     }
 }

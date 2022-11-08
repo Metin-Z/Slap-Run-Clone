@@ -31,15 +31,7 @@ public class BonusManComponent : MonoBehaviour
 
         int multiplier = GameManager.instance.score;
 
-        foreach (Rigidbody item in bonusMan.GetComponentsInChildren<Rigidbody>())
-        {
-            _rb.mass = 0.65f;
-            item.mass = 0.65f;
-            item.AddForce(transform.up * 4* multiplier);
-            item.AddForce(transform.forward * 8 * multiplier);
-            item.isKinematic = false;
-            item.constraints = RigidbodyConstraints.FreezePositionX;
-            
-        }
+        _rb.AddForce(transform.up * 4 * multiplier);
+        _rb.AddForce(transform.forward * 8 * multiplier);     
     }
 }

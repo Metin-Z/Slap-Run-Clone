@@ -51,6 +51,7 @@ public class PlayerController : MonoBehaviour
         if (other.CompareTag("Enemy"))
         {
             GameObject Enemy = other.gameObject;
+
             Punch(Enemy);
             GameManager.instance.score+=5;
             GameManager.instance.GetScoreMultiplier();
@@ -60,20 +61,12 @@ public class PlayerController : MonoBehaviour
     {
         if (Enemy.transform.position.x > transform.position.x)
         {
-            _anim.SetBool("RightP", true);
+            _anim.SetTrigger("RightP");
         }
-        else
-        {
-            _anim.SetBool("RightP", false);
-        }
-
+        
         if (Enemy.transform.position.x < transform.position.x)
         {
-            _anim.SetBool("LeftP", true);
-        }
-        else
-        {
-            _anim.SetBool("LeftP", false);
+            _anim.SetTrigger("LeftP");
         }
         Enemy.GetComponent<EnemyController>().Catch();
 

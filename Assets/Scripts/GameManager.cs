@@ -31,7 +31,10 @@ public class GameManager : MonoBehaviour
         while (!bonusLevel && score >= 0)
         {
             yield return new WaitForSeconds(3.25f);
-            score-=1;
+            if (!bonusLevel)
+            {
+                score -= 1;
+            }
             if (score < 0)
             {
                 score = 0;

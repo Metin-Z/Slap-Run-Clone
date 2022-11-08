@@ -1514,8 +1514,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6240005b1592f22439eca988fed631bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSpeed: 4
-  playerSwipeSpeed: 8
+  playerSpeed: 3
+  playerSwipeSpeed: 6
+  _anim: {fileID: 0}
 --- !u!65 &6967384078523916741
 BoxCollider:
   m_ObjectHideFlags: 0

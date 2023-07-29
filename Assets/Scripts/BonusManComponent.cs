@@ -24,6 +24,8 @@ public class BonusManComponent : MonoBehaviour
         PlayerController.instance._anim.SetBool("Kick", true);
 
         yield return new WaitForSeconds(0.8f);
+        PlayerController.instance._anim.SetBool("idle", true);
+        PlayerController.instance._anim.SetBool("Kick", false);
         Time.timeScale = 1f;
         _rb = bonusMan.GetComponent<Rigidbody>();
         bonusMan.GetComponent<Animator>().enabled = false;

@@ -246,6 +246,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4138954466790142915}
   - component: {fileID: 4138954466790142912}
+  - component: {fileID: 1469466017952773134}
   m_Layer: 0
   m_Name: Shirt
   m_TagString: Untagged
@@ -350,6 +351,20 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.0000008791685, y: 0.9777672, z: -0.009540588}
     m_Extent: {x: 0.3445571, y: 0.29338118, z: 0.22126064}
   m_DirtyAABB: 0
+--- !u!114 &1469466017952773134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4138954466790142914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6142b393ca453f64da4a4a8a2f5c46ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  meshRenderer: {fileID: 4138954466790142912}
+  shoe: 0
 --- !u!1 &4138954466840484922
 GameObject:
   m_ObjectHideFlags: 0
@@ -1142,6 +1157,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4138954467536681890}
   - component: {fileID: 4138954467536681891}
+  - component: {fileID: 5321370144055178451}
   m_Layer: 0
   m_Name: Sneakers
   m_TagString: Untagged
@@ -1247,6 +1263,20 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.0000012591481, y: 0.045368876, z: 0.040862855}
     m_Extent: {x: 0.24810722, y: 0.11365253, z: 0.147091}
   m_DirtyAABB: 0
+--- !u!114 &5321370144055178451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4138954467536681901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6142b393ca453f64da4a4a8a2f5c46ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  meshRenderer: {fileID: 4138954467536681891}
+  shoe: 1
 --- !u!1 &4138954467698406605
 GameObject:
   m_ObjectHideFlags: 0
@@ -1843,6 +1873,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4138954468341515402}
   - component: {fileID: 4138954468341515403}
+  - component: {fileID: 5015854508608620230}
   m_Layer: 0
   m_Name: Pants_03
   m_TagString: Untagged
@@ -1947,6 +1978,20 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.0000009536743, y: 0.4677559, z: 0.04233496}
     m_Extent: {x: 0.28656587, y: 0.38330984, z: 0.24974407}
   m_DirtyAABB: 0
+--- !u!114 &5015854508608620230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4138954468341515413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6142b393ca453f64da4a4a8a2f5c46ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  meshRenderer: {fileID: 4138954468341515403}
+  shoe: 0
 --- !u!1 &4138954468391201476
 GameObject:
   m_ObjectHideFlags: 0

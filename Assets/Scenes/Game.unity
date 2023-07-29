@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1447,6 +1447,16 @@ MonoBehaviour:
   failLevel: 0
   bonusLevel: 0
   score: 0
+  enemyRandomMats:
+  - {fileID: 2100000, guid: 52a9bed3c0258a044b08fe7c80e4ebfa, type: 2}
+  - {fileID: 2100000, guid: a1b0a9052e69d884f85577f0fb59a771, type: 2}
+  - {fileID: 2100000, guid: 01a53083aa251104ea21fe8074cfaedd, type: 2}
+  - {fileID: 2100000, guid: 01f50d6b765d4c94da2d3a03735d995e, type: 2}
+  - {fileID: 2100000, guid: eac1102135dddb946882ce2bc0588c91, type: 2}
+  - {fileID: 2100000, guid: dc3a678281b79e24f9b1a20b9cc9e3c2, type: 2}
+  - {fileID: 2100000, guid: 70a016b90b1d9a74c812d6f7eca24d94, type: 2}
+  - {fileID: 2100000, guid: ca20e84c6f68a684bb132bcf87e4949f, type: 2}
+  - {fileID: 2100000, guid: 78f75decadb80d14ba50364f3e7ebfcc, type: 2}
 --- !u!4 &1041680365
 Transform:
   m_ObjectHideFlags: 0
@@ -1987,6 +1997,7 @@ MonoBehaviour:
   Levels:
   - {fileID: 11400000, guid: 541f8bb896f39b1448f96b431ba0314e, type: 2}
   - {fileID: 11400000, guid: 971b1f9aa2f1c0043beb8073e3d2b21a, type: 2}
+  - {fileID: 11400000, guid: ebe842058c6960d499b1532c8a44df1d, type: 2}
   levelObjectList: []
 --- !u!1 &1618165608
 GameObject:
@@ -2784,7 +2795,7 @@ GameObject:
   - component: {fileID: 2107164224}
   - component: {fileID: 2107164223}
   m_Layer: 5
-  m_Name: SlapAndRun
+  m_Name: SmashRun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2808,7 +2819,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 573}
-  m_SizeDelta: {x: 700, y: 250}
+  m_SizeDelta: {x: 850, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2107164223
 MonoBehaviour:
@@ -2830,7 +2841,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Slap  Run
+  m_text: Smash  Run
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 951b3b51d2cbb664da2bbe675062a6b8, type: 2}
   m_sharedMaterial: {fileID: 1321075677822790205, guid: 951b3b51d2cbb664da2bbe675062a6b8,

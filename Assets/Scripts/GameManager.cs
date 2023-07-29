@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public bool bonusLevel;
     public int score;
 
+    public List<Material> enemyRandomMats;
     public virtual void Awake()
     {
         if (!instance)

@@ -1733,7 +1733,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSpeed: 4
-  playerSwipeSpeed: 7
+  playerSwipeSpeed: 18
   _anim: {fileID: 0}
 --- !u!65 &6967384078523916741
 BoxCollider:

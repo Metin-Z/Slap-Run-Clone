@@ -32,6 +32,7 @@ public class EnemyController : MonoBehaviour
             if (GameManager.instance.isGameRunning == false)
             {
                 _anim.SetBool("Dance", true);
+                _navMesh.enabled = false;
                 return;
             }
 

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8856784242955458458}
   - component: {fileID: 1589057711201434670}
   m_Layer: 0
-  m_Name: Level_04
+  m_Name: Level_08G
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d8bf4ea0469ce54eb2a2fb1525eab35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  generator: {fileID: 11400000, guid: 01a41c9cc52a4c644b2f179332c5cb8a, type: 2}
+  generator: {fileID: 11400000, guid: 1e05be3c7631b0345a52a9450e68eab6, type: 2}
   distanceExponent: 40
 --- !u!1001 &3293994845235606291
 PrefabInstance:

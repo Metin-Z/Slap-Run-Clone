@@ -25,7 +25,14 @@ public class GameManager : MonoBehaviour
     public void GetScoreMultiplier()
     {
         StartCoroutine(ScoreMultiplier());
-        
+
+    }
+
+    public void FailGame()
+    {
+        isGameRunning = false;
+        failLevel = true;
+        bonusLevel = false;
     }
     public IEnumerator ScoreMultiplier()
     {

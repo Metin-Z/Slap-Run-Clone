@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BonusManComponent : MonoBehaviour
 {
+    PlayerController playerController => PlayerController.instance;
     public GameObject camera;
     public GameObject bonusMan;
     Rigidbody _rb;
@@ -14,22 +15,29 @@ public class BonusManComponent : MonoBehaviour
             GameManager.instance.isGameRunning = false;
             camera.SetActive(true);
             Time.timeScale = 0.5f;
-            PlayerController.instance.enabled = false;
+            playerController.enabled = false;
             StartCoroutine(KickBonusMan());
+
+            other.transform.position = new Vector3(bonusMan.transform.position.x, other.transform.position.y, other.transform.position.z);
         }
     }
     public IEnumerator KickBonusMan()
     {
-        PlayerController.instance._anim.SetBool("Run", false);
-        PlayerController.instance._anim.SetBool("Kick", true);
+        playerController._anim.SetBool("Run", false);
+        playerController._anim.SetBool("Kick", true);
 
-        yield return new WaitForSeconds(0.8f);
-        PlayerController.instance._anim.SetBool("Kick", false);
-        PlayerController.instance._anim.SetBool("Run", false);
-        PlayerController.instance._anim.SetBool("Dance", true);
+        yield return new WaitForSeconds(0.3f);
+        playerController._anim.SetBool("Kick", false);
+        playerController._anim.SetBool("Run", false);
+        playerController._anim.SetBool("Dance", true);
         Time.timeScale = 1f;
         _rb = bonusMan.GetComponent<Rigidbody>();
         bonusMan.GetComponent<Animator>().enabled = false;
+
+        foreach (Rigidbody item in bonusMan.GetComponentsInChildren<Rigidbody>())
+        {
+            item.velocity = Vector3.zero;
+        }
 
         _rb.constraints = RigidbodyConstraints.FreezePositionX;
         _rb.constraints = RigidbodyConstraints.FreezeRotation;
@@ -37,6 +45,6 @@ public class BonusManComponent : MonoBehaviour
         int multiplier = GameManager.instance.score;
 
         _rb.AddForce(transform.up * 4 * multiplier);
-        _rb.AddForce(transform.forward * 8 * multiplier);     
+        _rb.AddForce(transform.forward * 8 * multiplier);
     }
 }

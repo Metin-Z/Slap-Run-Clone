@@ -5,16 +5,25 @@ using UnityEngine.AI;
 
 public class EnemyController : MonoBehaviour
 {
+
     public Animator _anim;
     public NavMeshAgent _navMesh;
     public Vector3 Target;
     public bool final;
+    PlayerController _playerController => PlayerController.instance;
     public void Catch()
     {
+
+        foreach (Rigidbody item in transform.GetComponentsInChildren<Rigidbody>())
+        {
+            item.velocity = Vector3.zero;
+        }
+
+        _navMesh.enabled = false;
         _anim.enabled = false;
         StartCoroutine(Run());
     }
-    public bool CatchPlayer;
+    public bool catchPlayer;
     public IEnumerator Run()
     {
         yield return new WaitForSeconds(1.75f);
@@ -22,24 +31,25 @@ public class EnemyController : MonoBehaviour
         {
             _anim.SetBool("Run", true);
             _anim.enabled = true;
-            CatchPlayer = true;
-        }     
+            _navMesh.enabled = true;
+            catchPlayer = true;
+        }
     }
     private void Update()
     {
-        if (CatchPlayer == true)
+        if (catchPlayer && gameObject.activeSelf)
         {
-            if (GameManager.instance.isGameRunning == false)
+            if (!GameManager.instance.isGameRunning)
             {
                 _anim.SetBool("Dance", true);
                 _navMesh.enabled = false;
                 return;
             }
 
-            Target = new Vector3(
-                PlayerController.instance.transform.position.x,
-                PlayerController.instance.transform.position.y,
-                PlayerController.instance.transform.position.z - 2.5f);
+            if (!_playerController) return;
+
+            Target = _playerController.transform.position + Vector3.back * 2.5f;
+
             _navMesh.SetDestination(Target);
         }
 

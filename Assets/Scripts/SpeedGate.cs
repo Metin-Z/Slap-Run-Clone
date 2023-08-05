@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class SpeedGate : MonoBehaviour
 {
-    public int speed;
+    public float speed;
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
             GameObject player = other.gameObject;
-            player.GetComponent<PlayerController>().playerSpeed = player.GetComponent<PlayerController>().playerSpeed + 2;
+            player.GetComponent<PlayerController>().playerSpeed = player.GetComponent<PlayerController>().playerSpeed + speed;
         }
     }
 }

@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed912ef04ddcf8349825de72f76b7985, type: 3}
+  m_Name: Generated_2
+  m_EditorClassIdentifier: 
+  player: {fileID: 6967384078533268065, guid: 5f578371c653e4b428cbd21d7c06780d, type: 3}
+  levelLength: 3
+  packages:
+  - {fileID: 5177386388943128341, guid: a6450e1c4209ecf4aa89989e5fee2215, type: 3}
+  - {fileID: 5177386388943128341, guid: 86c063177c05256408ae8f1dde031121, type: 3}
+  - {fileID: 5177386388943128341, guid: 601ac6ca4a2e4f940bcb7a7183ed6a0e, type: 3}
+  - {fileID: 5177386388943128341, guid: b3e43a90c8ca3734a8e3cf432914eae8, type: 3}
+  bonusLevelLength: 1
+  bonusPackages:
+  - {fileID: 5177386388943128341, guid: 5fa5ef7efa4427c44b2f895de8250fbb, type: 3}
+  - {fileID: 5177386388943128341, guid: 1dacae1abe0f6ff4794e916c4d1afb5f, type: 3}
+  bonusStarter: {fileID: 526342525825776916, guid: e13d545bb8f0a8f438a9abc9469308cd,
+    type: 3}
+  finalGame: {fileID: 304360862500025279, guid: d62e0c0e90438ef4aa73f370da39ce1b,
+    type: 3}

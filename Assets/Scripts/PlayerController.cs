@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -10,15 +11,16 @@ public class PlayerController : MonoBehaviour
     public Animator _anim;
     public virtual void Awake()
     {
-            instance = this;
-     
+        instance = this;
+
         _anim = GetComponent<Animator>();
     }
     void Update()
     {
-        if (GameManager.instance.isGameRunning == false)
+        if (!GameManager.instance.isGameRunning || dead)
             return;
-        _anim.SetBool("Run", true); 
+
+        _anim.SetBool("Run", true);
         Touch();
         Clamp();
         transform.Translate(Vector3.forward * Time.deltaTime * playerSpeed);
@@ -46,29 +48,46 @@ public class PlayerController : MonoBehaviour
         transform.Translate(Vector3.right * Input.GetAxis("Mouse X") * playerSwipeSpeed * Time.deltaTime);
     }
 
-    private void OnTriggerEnter(Collider other)
+    EnemyController enemy;
+    public void CallPunch(GameObject Enemy)
     {
-        if (other.CompareTag("Enemy"))
-        {
-            GameObject Enemy = other.gameObject;
+        enemy = Enemy.GetComponent<EnemyController>();
 
-            Punch(Enemy);
-            GameManager.instance.score+=5;
-            GameManager.instance.GetScoreMultiplier();
-        }
-    }
-    public void Punch(GameObject Enemy)
-    {
         if (Enemy.transform.position.x > transform.position.x)
         {
             _anim.SetTrigger("RightP");
         }
-        
+
         if (Enemy.transform.position.x < transform.position.x)
         {
             _anim.SetTrigger("LeftP");
         }
-        Enemy.GetComponent<EnemyController>().Catch();
+
+
+    }
+
+    public void Punch()
+    {
+        if (!enemy) return;
+
+        enemy.Catch();
+        GameManager.instance.score += 5;
+        GameManager.instance.GetScoreMultiplier();
+    }
+
+    bool dead;
+    public void Dead()
+    {
+        if (dead) return;
+
+        dead = true;
+
+        foreach (Rigidbody item in transform.GetComponentsInChildren<Rigidbody>())
+        {
+            item.velocity = Vector3.zero;
+        }
+
+        _anim.enabled = false;
 
     }
 }

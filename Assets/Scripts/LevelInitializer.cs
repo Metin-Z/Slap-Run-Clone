@@ -18,7 +18,7 @@ public class LevelInitializer : MonoBehaviour
         for (int i = 0; i < generator.levelLength; i++)
         {
             int x = Random.RandomRange(0, generator.packages.Count);
-            Debug.Log(x);
+
             generatePos = new Vector3(0,0,i * distanceExponent);
             GameObject spawnedPath = Instantiate(generator.packages[x], generatePos,Quaternion.identity);
             spawnedPath.transform.parent = transform;
@@ -32,7 +32,7 @@ public class LevelInitializer : MonoBehaviour
         for (int i = 0; i < generator.bonusLevelLength; i++)
         {
             int x = Random.RandomRange(0, generator.bonusPackages.Count);
-            Debug.Log(x + "bonus");
+
             generatePos = new Vector3(0, 0, (i * distanceExponent) + distanceExponent +basePackageExponent);
             GameObject spawnedPath = Instantiate(generator.bonusPackages[x], generatePos, Quaternion.identity);
             spawnedPath.transform.parent = transform;

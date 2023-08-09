@@ -50,8 +50,10 @@ public class EnemyController : MonoBehaviour
 
             Target = _playerController.transform.position + Vector3.back * 2.5f;
 
-            _navMesh.SetDestination(Target);
+            if (_navMesh != null && _navMesh.isActiveAndEnabled)
+            {
+                _navMesh.SetDestination(Target);
+            }
         }
-
     }
 }

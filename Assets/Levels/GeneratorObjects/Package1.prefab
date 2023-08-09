@@ -967,6 +967,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 20581082909401662, guid: cfd11d18a4e6a5e49932f4820a38b771,
         type: 3}
+      propertyPath: duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 20581082909401662, guid: cfd11d18a4e6a5e49932f4820a38b771,
+        type: 3}
       propertyPath: endValueV3.x
       value: -1.9
       objectReference: {fileID: 0}
@@ -1454,6 +1459,11 @@ PrefabInstance:
         type: 3}
       propertyPath: isFrom
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 20581082909401662, guid: cfd11d18a4e6a5e49932f4820a38b771,
+        type: 3}
+      propertyPath: duration
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 20581082909401662, guid: cfd11d18a4e6a5e49932f4820a38b771,
         type: 3}

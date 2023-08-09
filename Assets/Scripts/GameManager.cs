@@ -1,3 +1,5 @@
+using Cinemachine;
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -49,5 +51,16 @@ public class GameManager : MonoBehaviour
             }
 
         }
+    }
+
+    CinemachineVirtualCamera cam => Camera.main.transform.GetChild(0).transform.GetComponent<CinemachineVirtualCamera>();
+
+    public void FovIncreaser(float value)
+    {
+
+        float newFOV = cam.m_Lens.FieldOfView + value;
+        float animationDuration = 0.2f;
+
+        DOTween.To(() => cam.m_Lens.FieldOfView, fov => cam.m_Lens.FieldOfView = fov, newFOV, animationDuration);
     }
 }

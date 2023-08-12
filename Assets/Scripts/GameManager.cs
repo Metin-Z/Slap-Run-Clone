@@ -2,6 +2,7 @@ using Cinemachine;
 using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -40,7 +41,7 @@ public class GameManager : MonoBehaviour
     {
         while (!bonusLevel && score >= 0)
         {
-            yield return new WaitForSeconds(3.25f);
+            yield return new WaitForSeconds(5.25f);
             if (!bonusLevel)
             {
                 score -= 1;
@@ -62,5 +63,10 @@ public class GameManager : MonoBehaviour
         float animationDuration = 0.2f;
 
         DOTween.To(() => cam.m_Lens.FieldOfView, fov => cam.m_Lens.FieldOfView = fov, newFOV, animationDuration);
+    }
+
+    public void FovReset()
+    {
+        cam.m_Lens.FieldOfView = 60;
     }
 }

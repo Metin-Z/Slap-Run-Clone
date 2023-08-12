@@ -28,7 +28,7 @@ public class LevelManager : MonoBehaviour
     public void InitializeLevel()
     {
         Level currentLevel = GetCurrentLevel();
-
+        GameManager.instance.FovReset();
         levelObjectList.ForEach(x => Destroy(x));
         levelObjectList.Clear();
 

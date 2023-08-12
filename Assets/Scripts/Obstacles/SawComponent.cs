@@ -12,7 +12,8 @@ public class SawComponent : MonoBehaviour
 
             if (other.gameObject.CompareTag("Player"))
             {
-                other.GetComponent<PlayerController>().Dead();
+                other.TryGetComponent(out PlayerController player);
+                player.Dead();
                 gameManager.FailGame();
 
                 CanvasManager.instance.currentLevelObject.SetActive(false);

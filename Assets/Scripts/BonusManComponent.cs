@@ -34,17 +34,27 @@ public class BonusManComponent : MonoBehaviour
         _rb = bonusMan.GetComponent<Rigidbody>();
         bonusMan.GetComponent<Animator>().enabled = false;
 
+     
+
+        //_rb.constraints = RigidbodyConstraints.FreezePositionX;
+        //_rb.constraints = RigidbodyConstraints.FreezeRotation;
+        int multiplier;
+        if (GameManager.instance.score <= 25)
+        {
+            multiplier = 60;
+        }
+        else
+        {
+            multiplier = GameManager.instance.score + 30;
+        }
+
+        _rb.constraints &= ~RigidbodyConstraints.FreezePositionY;
+        _rb.AddForce(transform.up * 6 * multiplier);
+        _rb.AddForce(transform.forward * 6 * multiplier);
+
         foreach (Rigidbody item in bonusMan.GetComponentsInChildren<Rigidbody>())
         {
             item.velocity = Vector3.zero;
         }
-
-        _rb.constraints = RigidbodyConstraints.FreezePositionX;
-        _rb.constraints = RigidbodyConstraints.FreezeRotation;
-
-        int multiplier = GameManager.instance.score;
-
-        _rb.AddForce(transform.up * 4 * multiplier);
-        _rb.AddForce(transform.forward * 8 * multiplier);
     }
 }

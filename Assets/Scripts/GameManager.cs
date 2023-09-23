@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public bool isGameRunning = false;
     public bool failLevel = false;
     public bool bonusLevel;
+    public bool bonusEnd;
     public int score;
 
     public List<Material> enemyRandomMats;

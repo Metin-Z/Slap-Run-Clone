@@ -45,13 +45,22 @@ public class BonusManComponent : MonoBehaviour
         }
         else
         {
-            multiplier = GameManager.instance.score + 30;
+            multiplier = GameManager.instance.score + 25;
         }
 
+        SetZero();
+
         _rb.constraints &= ~RigidbodyConstraints.FreezePositionY;
-        _rb.AddForce(transform.up * 6 * multiplier);
+        _rb.AddForce(transform.up * 5.5f * multiplier);
         _rb.AddForce(transform.forward * 6 * multiplier);
 
+        SetZero();
+
+
+    }
+
+    private void SetZero()
+    {
         foreach (Rigidbody item in bonusMan.GetComponentsInChildren<Rigidbody>())
         {
             item.velocity = Vector3.zero;

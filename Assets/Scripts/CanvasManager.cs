@@ -40,6 +40,7 @@ public class CanvasManager : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(0))
             {
+                GameManager.instance.bonusEnd = false;
                 GameManager.instance.isGameRunning = true;
                 GameManager.instance.failLevel = false;
                 startPanel.SetActive(false);

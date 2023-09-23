@@ -29,6 +29,8 @@ public class LevelInitializer : MonoBehaviour
         GameObject bonusGame = Instantiate(generator.bonusStarter, bonusPos, Quaternion.identity);
         bonusGame.transform.parent = transform;
 
+            bonusGame.transform.position = new Vector3(bonusGame.transform.position.x,bonusGame.transform.position.y-1,bonusGame.transform.position.z);
+
         for (int i = 0; i < generator.bonusLevelLength; i++)
         {
             int x = Random.RandomRange(0, generator.bonusPackages.Count);

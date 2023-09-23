@@ -719,7 +719,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 668788441}
   m_Direction: 2
   m_MinValue: 0
-  m_MaxValue: 90
+  m_MaxValue: 110
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
@@ -1678,6 +1678,7 @@ MonoBehaviour:
   isGameRunning: 0
   failLevel: 0
   bonusLevel: 0
+  bonusEnd: 0
   score: 0
   enemyRandomMats:
   - {fileID: 2100000, guid: 52a9bed3c0258a044b08fe7c80e4ebfa, type: 2}

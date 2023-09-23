@@ -52,7 +52,7 @@ public class BonusManComponent : MonoBehaviour
 
         _rb.constraints &= ~RigidbodyConstraints.FreezePositionY;
         _rb.AddForce(transform.up * 5.5f * multiplier);
-        _rb.AddForce(transform.forward * 6 * multiplier);
+        _rb.AddForce(transform.forward * 5 * multiplier);
 
         SetZero();
 

@@ -9,6 +9,8 @@ public class PlayerController : MonoBehaviour
     public float playerSpeed;
     public float playerSwipeSpeed;
     public Animator _anim;
+
+    public Rigidbody skelet;
     public virtual void Awake()
     {
         instance = this;

@@ -1845,7 +1845,7 @@ MonoBehaviour:
   playerSpeed: 5
   playerSwipeSpeed: 18
   _anim: {fileID: 0}
-  ragdollRB: {fileID: 2729767016473149474}
+  skelet: {fileID: 2729767016473149474}
 --- !u!65 &6967384078523916741
 BoxCollider:
   m_ObjectHideFlags: 0

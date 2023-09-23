@@ -15,7 +15,13 @@ public class SawComponent : MonoBehaviour
                 other.TryGetComponent(out PlayerController player);
                 player.Dead();
                 gameManager.FailGame();
+                player.skelet.constraints = RigidbodyConstraints.FreezePositionY;
 
+
+                foreach (Rigidbody item in other.GetComponentsInChildren<Rigidbody>())
+                {
+                    item.velocity = Vector3.zero;
+                }
                 CanvasManager.instance.currentLevelObject.SetActive(false);
 
             }

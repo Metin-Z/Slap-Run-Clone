@@ -16,6 +16,13 @@ public class PlayerController : MonoBehaviour
         instance = this;
 
         _anim = GetComponent<Animator>();
+
+        
+            foreach (CharacterJoint item in transform.GetComponentsInChildren<CharacterJoint>())
+            {
+                item.enableProjection = true;
+            }
+        
     }
     void Update()
     {

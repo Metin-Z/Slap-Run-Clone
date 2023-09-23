@@ -66,4 +66,11 @@ public class BonusManComponent : MonoBehaviour
             item.velocity = Vector3.zero;
         }
     }
+    private void Awake()
+    {
+        foreach (CharacterJoint item in bonusMan.GetComponentsInChildren<CharacterJoint>())
+        {
+            item.enableProjection = true;
+        }
+    }
 }

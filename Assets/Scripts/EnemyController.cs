@@ -70,6 +70,7 @@ public class EnemyController : MonoBehaviour
         foreach (CharacterJoint item in transform.GetComponentsInChildren<CharacterJoint>())
         {
             item.enableProjection = true;
+            item.enablePreprocessing = true;
         }
     }
 }

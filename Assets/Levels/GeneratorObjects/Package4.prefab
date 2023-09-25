@@ -5479,36 +5479,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Big Grinder (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 20581082909401662, guid: cfd11d18a4e6a5e49932f4820a38b771,
-        type: 3}
-      propertyPath: duration
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 20581082909401662, guid: cfd11d18a4e6a5e49932f4820a38b771,
-        type: 3}
-      propertyPath: easeType
-      value: 33
-      objectReference: {fileID: 0}
-    - target: {fileID: 20581082909401662, guid: cfd11d18a4e6a5e49932f4820a38b771,
-        type: 3}
-      propertyPath: endValueV3.x
-      value: 2.27
-      objectReference: {fileID: 0}
-    - target: {fileID: 20581082909401662, guid: cfd11d18a4e6a5e49932f4820a38b771,
-        type: 3}
-      propertyPath: endValueV3.y
-      value: 0.04
-      objectReference: {fileID: 0}
-    - target: {fileID: 20581082909401662, guid: cfd11d18a4e6a5e49932f4820a38b771,
-        type: 3}
-      propertyPath: endValueV3.z
-      value: 0.96
-      objectReference: {fileID: 0}
-    - target: {fileID: 20581082909401662, guid: cfd11d18a4e6a5e49932f4820a38b771,
-        type: 3}
-      propertyPath: animationType
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 1097104927209203149, guid: cfd11d18a4e6a5e49932f4820a38b771,
         type: 3}
       propertyPath: m_LocalRotation.w
@@ -5828,41 +5798,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Big Grinder
-      objectReference: {fileID: 0}
-    - target: {fileID: 20581082909401662, guid: cfd11d18a4e6a5e49932f4820a38b771,
-        type: 3}
-      propertyPath: isFrom
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 20581082909401662, guid: cfd11d18a4e6a5e49932f4820a38b771,
-        type: 3}
-      propertyPath: duration
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 20581082909401662, guid: cfd11d18a4e6a5e49932f4820a38b771,
-        type: 3}
-      propertyPath: easeType
-      value: 33
-      objectReference: {fileID: 0}
-    - target: {fileID: 20581082909401662, guid: cfd11d18a4e6a5e49932f4820a38b771,
-        type: 3}
-      propertyPath: endValueV3.x
-      value: 1.88
-      objectReference: {fileID: 0}
-    - target: {fileID: 20581082909401662, guid: cfd11d18a4e6a5e49932f4820a38b771,
-        type: 3}
-      propertyPath: endValueV3.y
-      value: 0.04
-      objectReference: {fileID: 0}
-    - target: {fileID: 20581082909401662, guid: cfd11d18a4e6a5e49932f4820a38b771,
-        type: 3}
-      propertyPath: endValueV3.z
-      value: -2.46
-      objectReference: {fileID: 0}
-    - target: {fileID: 20581082909401662, guid: cfd11d18a4e6a5e49932f4820a38b771,
-        type: 3}
-      propertyPath: animationType
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1097104927209203149, guid: cfd11d18a4e6a5e49932f4820a38b771,
         type: 3}

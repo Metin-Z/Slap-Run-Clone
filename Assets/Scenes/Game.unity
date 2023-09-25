@@ -2970,7 +2970,7 @@ GameObject:
   - component: {fileID: 2107164224}
   - component: {fileID: 2107164223}
   m_Layer: 5
-  m_Name: SmashRun
+  m_Name: PunchRun-Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3016,7 +3016,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Smash  Run
+  m_text: Punch Run
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4ff11973e0ff4d64d9b84d33265fe25e, type: 2}
   m_sharedMaterial: {fileID: 2660661422652261928, guid: 4ff11973e0ff4d64d9b84d33265fe25e,

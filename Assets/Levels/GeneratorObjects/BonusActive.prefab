@@ -487,7 +487,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: BONUS
+  m_text: 'SPEED
+
+    BONUS'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4ff11973e0ff4d64d9b84d33265fe25e, type: 2}
   m_sharedMaterial: {fileID: 2660661422652261928, guid: 4ff11973e0ff4d64d9b84d33265fe25e,
@@ -515,8 +517,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 1
-  m_fontSizeBase: 1
+  m_fontSize: 0.8
+  m_fontSizeBase: 0.8
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

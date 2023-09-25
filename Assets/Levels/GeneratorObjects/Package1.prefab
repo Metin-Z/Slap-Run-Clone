@@ -965,55 +965,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Big Grinder (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 20581082909401662, guid: cfd11d18a4e6a5e49932f4820a38b771,
-        type: 3}
-      propertyPath: duration
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 20581082909401662, guid: cfd11d18a4e6a5e49932f4820a38b771,
-        type: 3}
-      propertyPath: endValueV3.x
-      value: -1.9
-      objectReference: {fileID: 0}
-    - target: {fileID: 20581082909401662, guid: cfd11d18a4e6a5e49932f4820a38b771,
-        type: 3}
-      propertyPath: endValueV3.y
-      value: 0.04
-      objectReference: {fileID: 0}
-    - target: {fileID: 20581082909401662, guid: cfd11d18a4e6a5e49932f4820a38b771,
-        type: 3}
-      propertyPath: endValueV3.z
-      value: -1.59
-      objectReference: {fileID: 0}
-    - target: {fileID: 20581082909401662, guid: cfd11d18a4e6a5e49932f4820a38b771,
-        type: 3}
-      propertyPath: animationType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1097104927209203149, guid: cfd11d18a4e6a5e49932f4820a38b771,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1097104927209203149, guid: cfd11d18a4e6a5e49932f4820a38b771,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2139357832616477879, guid: cfd11d18a4e6a5e49932f4820a38b771,
         type: 3}
       propertyPath: m_RootOrder
       value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 2139357832616477879, guid: cfd11d18a4e6a5e49932f4820a38b771,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.5000001
-      objectReference: {fileID: 0}
-    - target: {fileID: 2139357832616477879, guid: cfd11d18a4e6a5e49932f4820a38b771,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.50000006
       objectReference: {fileID: 0}
     - target: {fileID: 2139357832616477879, guid: cfd11d18a4e6a5e49932f4820a38b771,
         type: 3}
@@ -1455,60 +1410,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Big Grinder
       objectReference: {fileID: 0}
-    - target: {fileID: 20581082909401662, guid: cfd11d18a4e6a5e49932f4820a38b771,
-        type: 3}
-      propertyPath: isFrom
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 20581082909401662, guid: cfd11d18a4e6a5e49932f4820a38b771,
-        type: 3}
-      propertyPath: duration
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 20581082909401662, guid: cfd11d18a4e6a5e49932f4820a38b771,
-        type: 3}
-      propertyPath: endValueV3.x
-      value: -1.9
-      objectReference: {fileID: 0}
-    - target: {fileID: 20581082909401662, guid: cfd11d18a4e6a5e49932f4820a38b771,
-        type: 3}
-      propertyPath: endValueV3.y
-      value: 0.04
-      objectReference: {fileID: 0}
-    - target: {fileID: 20581082909401662, guid: cfd11d18a4e6a5e49932f4820a38b771,
-        type: 3}
-      propertyPath: endValueV3.z
-      value: -1.59
-      objectReference: {fileID: 0}
-    - target: {fileID: 20581082909401662, guid: cfd11d18a4e6a5e49932f4820a38b771,
-        type: 3}
-      propertyPath: animationType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1097104927209203149, guid: cfd11d18a4e6a5e49932f4820a38b771,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1097104927209203149, guid: cfd11d18a4e6a5e49932f4820a38b771,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2139357832616477879, guid: cfd11d18a4e6a5e49932f4820a38b771,
         type: 3}
       propertyPath: m_RootOrder
       value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 2139357832616477879, guid: cfd11d18a4e6a5e49932f4820a38b771,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.5000001
-      objectReference: {fileID: 0}
-    - target: {fileID: 2139357832616477879, guid: cfd11d18a4e6a5e49932f4820a38b771,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.50000006
       objectReference: {fileID: 0}
     - target: {fileID: 2139357832616477879, guid: cfd11d18a4e6a5e49932f4820a38b771,
         type: 3}
